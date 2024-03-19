@@ -1,0 +1,25 @@
+The UNION operator is used to combine the result-set of two or more SELECT statements. It just takes all the rows of the 2 tables and displays them as one.
+There are, however, a few conditions that the UNION operators require in order to work. They are as follows -
+1. Every SELECT statement within UNION must have the same number of columns.
+2. The columns must all have similar data types.
+3. The column in every SELECT statement must also be in the same order.
+
+
+Difference Between Join and Union Operator-
+
+JOIN combines data from many tables based on the condition
+It combines data into new columns
+The number of columns selected from each table can be different
+Datatypes of corresponding columns in different tables can be different
+
+UNION combines the result of two or more SELECT statements
+It combines data into new rows 
+The number of columns selected from different tables should be the same
+Datatypes of corresponding columns in different tables should be the the same
+
+(SELECT * FROM suppliers) UNION (SELECT * FROM company_products);
+(SELECT first_name, phone from customers) UNION (SELECT contact_name, phone from suppliers);
+(SELECT city, country FROM customers) UNION ALL (SELECT city, country FROM suppliers);
+(SELECT city, country FROM customers) INTERSECT (SELECT city, country FROM suppliers);
+(SELECT city, country FROM customers WHERE country='USA' OR country='Brazil') UNION (SELECT city, country FROM suppliers WHERE country='USA' OR country='Brazil');
+(SELECT customer_id, total_amount FROM company_orders) UNION (SELECT id, 0 from customers);
