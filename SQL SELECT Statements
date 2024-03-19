@@ -1,0 +1,10 @@
+#SELECT STATEMENT
+
+Select * from customers;
+Select first_name, last_name from customers;
+Select * from customers where first_name='Alexander';
+Select * from customers where first_name='Alexander' and last_name='Feuer';
+Select * from customers where first_name='Alexander' or last_name='Feuer';
+
+Select * from suppliers;
+Select company_name, contact_name from suppliers where country='USA' or country='UK';
