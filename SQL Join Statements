@@ -1,0 +1,14 @@
+Join keyword is usually used to join things.
+There are 4 types of join statements -
+1. Inner Join - The inner join keyword selects records that have matching values in both tables
+2. Full Join - This keyword returns all records that match the records in the left (table1) and right(table2) tables. Full Join and Full outer join both are same
+3. Left Join - A Left Join returns all records from the left table (table1) and the matching records from the right table (table2). If there is no match, the right side will show 0 records.
+4. Right Join - This keyword returns all records from the right table (table2), and all matching records from the left table (table1). If there is no match, 0 records will appear from the left side.
+
+SELECT * from company_products;
+SELECT * from company_orders;
+SELECT * from order_items;
+
+SELECT customers.first_name, customers.last_name, company_orders.date,company_orders.total_amount FROM customers INNER JOIN company_orders ON customers.id=company_orders.customer_id;
+SELECT customers.first_name, customers.last_name, company_orders.date,company_orders.total_amount FROM customers LEFT JOIN company_orders ON customers.id=company_orders.customer_id;
+SELECT c.first_name, c.last_name, o.date, o.order_number FROM company_orders o LEFT JOIN customers c ON c.id=o.customer_id;
