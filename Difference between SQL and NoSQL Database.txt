@@ -1,0 +1,9 @@
+SQL databases are table based.Different tables are created for different data.
+SQL databases strictly rely on relations. This means that that data is present in separate tables with a relation between them.
+SQL databases have structured predefined schemas. All the columns in a particular table define the data type of all the data.
+SQL databases are better with multi row based structured data.
+
+NoSQL databases are JSON based.Usually it’s key-value pairs.
+NoSQL databases do not use relations.
+NoSQL databases do not have schemas and are not structured. You can have as many key-value pairs with any data type you want to use.
+NoSQL databases are better for JSON like or unstructured data.
